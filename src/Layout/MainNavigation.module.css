@@ -1,0 +1,39 @@
+header {
+    background-color: maroon;
+    color:white;
+    display: flex;
+    align-items: center; /* bez pouziti tohoto prikazu bylo 'my tasks' vys nez ty odkazy*/
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 200%;
+    font-weight: bold;
+}
+
+header ul {
+    list-style-type: none;
+
+}
+
+header ul li {
+    display: inline-block;
+}
+
+header a {
+    text-decoration: none;
+    font-size: 150%;
+    color: lightpink;
+    margin-left: 20px;
+    margin-right: 20px;
+    align-items: right;
+}
+
+header a:hover,
+header a:active {
+    color: white;
+}
+
+
+
+
