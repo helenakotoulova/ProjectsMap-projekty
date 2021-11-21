@@ -1,5 +1,6 @@
 import React from 'react';
-import classes from './AllTasks.module.css'
+import TasksList from '../Tasks/TasksList';
+
 
 const dummyData = [
     {
@@ -18,21 +19,15 @@ const dummyData = [
         description: 'Start new CFD simulation'
     }
 ]
-    //const data={title: 'cau'}
-    //console.log(dummyData[0].title)
+
+
 
 function AllTasks(props) {
     return(
         <section>
             <h1>All Tasks</h1>
-            {dummyData.map((x) => 
-                <div className={classes.ukoly}>
-                <h2 className={classes.title}>{x.title}</h2>
-                <p className={classes.description}>Description: {x.description}</p>
-                <button>Finished</button>
-                <button>Abort</button>
-                </div>)}   
-        </section>
+            <p><TasksList tasks={dummyData} /></p>
+        </section>    
     )
 }
 

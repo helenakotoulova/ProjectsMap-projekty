@@ -9,7 +9,6 @@ function MainNavigation() {
                 <ul>
                     <li><Link to="/">All Tasks</Link></li>
                     <li><Link to='/finished-tasks'>Finished Tasks</Link></li>
-                    <li><Link to="/aborted-tasks">Aborted Tasks</Link></li>
                 </ul>
             </nav>
         </header>
