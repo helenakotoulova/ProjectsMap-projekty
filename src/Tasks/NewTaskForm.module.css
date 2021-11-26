@@ -1,0 +1,43 @@
+
+form {
+    text-align: left;
+    padding:1rem;
+}
+
+.formPart {
+    width:100%;
+    margin-bottom: 10px;
+
+}
+
+.formPart label {
+    display: block;
+    font-weight: bold;
+    text-align: left;
+}
+
+.formPart input,
+.formPart textarea {
+    display:block;
+    font:inherit;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width:100%;
+}
+
+.actions {
+    text-align: right;
+}
+
+.actions button {
+    color:maroon;
+    background-color: white;
+    border-radius: 3px;
+    border: 1px solid maroon;
+}
+
+.actions button:hover,
+.actions button:active {
+    color: white;
+    background-color: maroon;
+}

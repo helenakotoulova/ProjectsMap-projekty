@@ -3,6 +3,7 @@ import FinishedProvider from "./context/FinishedContext";
 
 import AllTasks from "./pages/AllTasks";
 import FinishedTasks from "./pages/FinishedTasks";
+import AddNewTask from './pages/AddNewTask';
 import Layout from "./Layout/Layout";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<AllTasks />}/>
           <Route path="/finished-tasks" element={<FinishedTasks />}/>
+          <Route path='/add-new-task' element={<AddNewTask />}/>
         </Routes>
       </Layout>
       </FinishedProvider>

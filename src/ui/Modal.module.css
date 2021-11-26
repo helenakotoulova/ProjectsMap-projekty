@@ -1,0 +1,28 @@
+.modal {
+    z-index: 10;
+    background-color: #fcf3f6;
+    color: black;
+    position: fixed;
+    width: 50rem;
+    left: calc(50% - 25rem); /*tahkle se dostanu na pulku. vezmu 50% a od toho odectu pulku sirky meho modalu (ten ma sirku 50rem) */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    text-align: center;
+
+}
+
+.modal h1 {
+    color: black;
+    font-size: 150%;
+    margin: 10px auto;
+}
+
+.modal input {
+    margin-left: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.modal label {
+    margin-right: 25px;
+}

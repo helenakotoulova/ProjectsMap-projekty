@@ -1,3 +1,8 @@
 body {
-    background-color: #fffaf2;
+    background-color: #fcf3f6;
+}
+
+.main {
+    max-width: 40rem;
+    margin: auto;
 }

@@ -9,29 +9,45 @@ header {
 .logo {
     font-size: 200%;
     font-weight: bold;
+    margin-left: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 header ul {
     list-style-type: none;
+    margin:0;
+    padding:0;
 
 }
 
 header ul li {
     display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 header a {
     text-decoration: none;
     font-size: 150%;
     color: lightpink;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 30px;
+    /*margin-right: 30px;*/
     align-items: right;
 }
 
 header a:hover,
 header a:active {
     color: white;
+}
+
+.badge{
+    border-radius: 5px;
+    font-size: 150%;
+    margin-right: 30px;
+    margin-left:10px;
+    background-color: #ff4d4d;
+    padding: 2px 10px;
 }
 
 

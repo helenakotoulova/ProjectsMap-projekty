@@ -1,3 +1,7 @@
 ul {
     list-style: none;
+    margin:auto;
+    padding:0; /* kvuli tomuhle paddingu to bylo furt spatne posunute,
+    nemela jsem tam tenle padding a bylo to posunute doleva.*/
+    /*The <ul> element has browser inherent padding & margin by default. */
 }
