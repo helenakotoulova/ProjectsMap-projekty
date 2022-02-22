@@ -1,25 +1,27 @@
-import React, {useRef, useContext} from "react";
+import React, {useRef, useContext, useState} from "react";
 import classes from './NewTodo.module.css';
 import { TodosContext } from "../store/todos-context";
 
-const NewTodo: React.FC = () => { //nadefinujeme prop onAddTodo jako function, ktera nebude mit zadnou return value (zde jen passujeme tu hodnotu do parent komponenty), tzn type void
+const NewTodo: React.FC = () => { //pred pouzitim Contextu:nadefinujeme prop onAddTodo jako function, ktera nebude mit zadnou return value (zde jen passujeme tu hodnotu do parent komponenty), tzn type void
     const todosCtx = useContext(TodosContext);
+    const [enteredText,setEnteredText] = useState<string>('');
     
     const todoTextInputRef = useRef<HTMLInputElement>(null); // meli bychom pridat starting value => null
     
     const submitHandler = (event:React.FormEvent) => {
         event.preventDefault();
-        const enteredTodoText=todoTextInputRef.current!.value; 
+        const enteredTodoText=todoTextInputRef.current!.value; // musime zde dat bud ! nebo ?
         if (enteredTodoText.trim().length === 0) {
             // throw an error
             return;
         }
         todosCtx.addTodo(enteredTodoText);
+        setEnteredText('');
     }
     return (
         <form onSubmit={submitHandler} className={classes.form}>
             <label htmlFor='text'>Todo text</label>
-            <input type='text' id='text' ref={todoTextInputRef}></input>
+            <input type='text' id='text' ref={todoTextInputRef} value={enteredText} onChange={(e:React.ChangeEvent<HTMLInputElement>)=> setEnteredText(e.target.value)}></input>
             <button>Add Todo</button>
         </form>
     )

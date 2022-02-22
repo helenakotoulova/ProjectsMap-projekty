@@ -3,6 +3,10 @@ import NewTodo from "./components/NewTodo";
 import TodosContextProvider from "./store/todos-context";
 
 function App() {
+
+  // pokud bychom pridavali databazi:
+  //const getTodos = async (): Promise<Todo[]> =>
+  //await (await fetch(url)).json();
   
   return (
     <TodosContextProvider>
