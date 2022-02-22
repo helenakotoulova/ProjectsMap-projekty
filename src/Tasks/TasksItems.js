@@ -40,8 +40,8 @@ function TasksItems(props) {
     }
 
     function chooseImportanceHandler(event) {
-        setHodnota(event.target.value);
-        setModalIsOpen(false);
+            setHodnota(event.target.value);
+            setModalIsOpen(false);
     }
 
     useEffect(()=>{

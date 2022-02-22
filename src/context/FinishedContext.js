@@ -20,7 +20,9 @@ function FinishedProvider(props) {
     
     function removefinishedHandler(clicked) {
         return(
-        setFinished(finished.filter(element => element.id !== clicked))
+       // setFinished(finished.filter(element => element.id !== clicked))
+       setFinished((prev) => {return prev.filter(element => element.id !== clicked)}
+        )
         )
     }
 
