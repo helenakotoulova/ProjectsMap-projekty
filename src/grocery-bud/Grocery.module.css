@@ -1,0 +1,107 @@
+.section {
+    width:50vw;
+    height:auto;
+    margin:auto;
+    box-shadow: 0 2px 8px rgba(0,0,0.75);
+    padding:1rem 2rem;
+    border-radius:1rem;
+    margin-top:2rem;
+}
+
+.title {
+    text-align:center;
+}
+
+.form {
+    display:grid;
+    grid-template-columns: 80% 1fr;
+}
+
+.form input {
+    -webkit-appearance: none;
+    border:2px solid lightseagreen;
+    border-radius: 0.1rem;
+    font:inherit;
+    font-size:1rem;
+}
+
+.form input:focus,
+.form input:active,
+.form input:hover {
+    -webkit-appearance: none; 
+    outline:none; /* BEZ TOHOTO SE TO FURT DELALO CERNE TEN OKRAJ!*/
+    border:2px solid #157772;
+}
+
+.form button {
+    border:2px solid lightseagreen;
+    border-radius: 0.1rem;
+    background-color: lightseagreen;
+    color:white;
+    font:inherit;
+    font-size:1rem;
+    cursor:pointer;
+    padding:0.5rem;
+}
+
+.form button:hover {
+    background-color:#157772;
+    border:2px solid #157772;
+}
+
+.text {
+    margin-top:0.5rem;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font:inherit;
+    font-size:1rem;
+    padding:0.5rem;
+}
+
+.text:hover {
+    background-color:aliceblue;
+    border-radius: 0.2rem;
+}
+
+.icon1,
+.icon2 {
+    background-color:transparent;
+    border:transparent;
+    cursor:pointer;
+}
+
+.icon1 {
+    color:red;
+}
+
+.icon2 {
+    color:green;
+}
+
+.clearAllBtn {
+    display:block;
+    margin:1rem auto 0;
+    width:fit-content;
+    background-color: transparent;
+    border: transparent;
+    color:red;
+    font:inherit;
+    font-size:1rem;
+    letter-spacing: 0.2rem;
+    padding:0.2rem;
+    cursor:pointer;
+}
+
+.clearAllBtn:hover {
+    border-bottom: 1px solid red;
+}
+
+.clearAllBtn[disabled] {
+    cursor:not-allowed;
+}
+
+.clearAllBtn[disabled]:hover {
+    border:transparent;
+}
