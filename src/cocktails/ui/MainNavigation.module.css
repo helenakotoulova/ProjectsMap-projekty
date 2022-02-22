@@ -1,0 +1,45 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5rem;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  padding: 1rem;
+  margin: 0;
+}
+
+.nav {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.list li {
+  margin-left: 3rem;
+}
+
+.list a {
+  text-decoration: none;
+  font:inherit;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color:green;
+  letter-spacing: 0.1rem;
+}
+
+.list a:hover{
+    color: darkgreen;
+    border-bottom: 2px solid darkgreen;
+}
