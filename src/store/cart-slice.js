@@ -29,14 +29,14 @@ const cartSlice = createSlice({
           price: newItem.price,
           quantity: 1,
           totalPrice: newItem.price, // predtim tam tahle polozka nebyla, takz ekdyz ji pridame poprve, tak celkova cena je rovna te cene polozky, protoze muzeme pridat jen 1.
-          name: newItem.title,
+          title: newItem.title,
         });
       }
     },
     removeItemFromCart(state, action) {
       const id = action.payload;
       const existingItem = state.items.find((item) => item.id === id);
-      state.totalQuantity--; // je jedno jestli uz to mame v kosiku nebo ne => vzdy se celk. mnozstvi snizi o 1.
+      state.totalQuantity--;
       state.changed=true;
       if (existingItem.quantity === 1) {
         state.items = state.items.filter((item) => item.id !== id); // tady to naopak musim zapsat jako state.items = state.items.filter ... protoze return value je ten vyfiltrovany array a kdyz tam nedam to state.items = , tak se to nikam nezapise.

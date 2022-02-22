@@ -10,7 +10,7 @@ const CartItem = (props) => {
   const addToCartHandler = () => {
     dispatch(cartActions.addItemToCart({
       id,
-      name: title,
+      title: title,
       price,
     }));
   }
@@ -18,6 +18,7 @@ const CartItem = (props) => {
   const removeFromCartHandler = () => {
     dispatch(cartActions.removeItemFromCart(id));
   }
+
 
   return (
     <li className={classes.item}>
