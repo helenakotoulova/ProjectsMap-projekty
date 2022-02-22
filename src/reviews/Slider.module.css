@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  text-align: center;
+}
+
+.list {
+  padding: 0;
+  margin: 0 auto;
+  position: relative;
+  width: 90vw;
+  height: 40rem;
+}
+
+.article {
+  width: 60%; /* MISTO 40% JSEM DALA 60%, ABY I TEN CLOVEK S NEJDELSIM TEXTEM, MEL TEN TEXT NA 2 RADKY A NE NA 3. ABY BYLY VSECHNY ARTICLY PEKNE VEDLE SEBE A NEUSKAKOVALO TO.*/
+  height: auto;
+  padding: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease-out;
+  border: 1px solid black;
+  /* pozicovani obsahu v articlu:*/
+  display:flex;
+  flex-direction: column;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.imageContainer {
+  width: 10rem;
+  height: 10rem;
+  position: relative;
+  margin: auto;
+  /*vycentruju obrazek*/
+  display:flex;
+  justify-content:center;
+  align-items: center;
+}
+
+.image {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.imageContainer::after {
+  content: "";
+  display: block;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background-color: orange;
+  position: absolute;
+  padding:0;
+  margin:0;
+  z-index: -1;
+  top: 0.7rem;
+  left: 1.6rem;
+}
+
+.badge {
+  color: orange;
+  font-weight: bold;
+  position: absolute;
+  top: 1.2rem;
+  left: 1.1rem;
+  font-size: 1.5rem;
+}
+
+.article h3 {
+  color: orange;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-bottom: 0;
+}
+
+.article h4 {
+  color: rgb(161, 159, 159);
+  text-transform: capitalize;
+  margin-top: 0.5rem;
+}
+
+.article p {
+  text-align:center;
+}
+
+.left {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+}
+.right {
+  position: absolute;
+  top: 50%;
+  right: 20%;
+}
+
+.left,
+.right {
+  color: grey;
+  background-color: rgb(233, 232, 232);
+  border-radius: 0.5rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  cursor: pointer;
+  width:2rem;
+  height:2rem;
+}
+
+.surpriseBtn {
+  font: inherit;
+  color: orange;
+  border: 1px solid orange;
+  padding: 0.5rem 1rem;
+  width: 8rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.article {
+  opacity: 0;
+}
+
+.activeSlide {
+  opacity: 1;
+}
+
+.lastSlide {
+  transform: translate(-150%,-50%);
+}
+
+.nextSlide {
+  transform: translate(50%,-50%);
+}

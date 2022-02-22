@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    text-align: center;
+  }
+
+.mainSection {
+    width:90vw;
+    height:25rem;
+    margin: 4rem auto 0;
+    /*display:flex;
+    justify-content: space-between;
+    align-items: center;
+    border:1px solid black;*/
+    position:relative;
+}
+
+.article {
+    /*Alignovani elementu v articlu*/
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius:1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    width:70%;
+    height:25rem;
+    padding:1rem;
+    /*border:1px solid black;*/
+    position:absolute;
+    left:50%;
+    top:40%;
+    transform:translate(-50%,-50%);
+    opacity:0;
+    transition:all 0.3s ease-out;
+    margin:0;
+}
+
+.article p {
+    text-align: center;
+} 
+
+
+.article h3 {
+    color: orange;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-bottom: 0;
+  }
+  
+  .article h4 {
+    color: rgb(161, 159, 159);
+    text-transform: capitalize;
+    margin-top: 0.5rem;
+  }
+
+.imageContainer {
+    width: 10rem;
+    height:10rem;
+    position:relative;
+
+}
+
+.imageContainer::after {
+    display:block;
+    content: '';
+    width:8rem;
+    height:8rem;
+    z-index: -1;
+    border-radius: 50%;
+    background-color: orange;
+    position:absolute;
+    top:-0.2rem;
+    left:0.7rem;
+}
+
+.img {
+    width:8rem;
+    height:8rem;
+    border-radius:50%;
+    object-fit: cover;
+}
+
+.left,
+.right {
+    background-color: lightgray;
+    color:black;
+    font-weight: bold;
+    width:2rem;
+    height:2rem;
+    border-radius: 0.25rem;
+    padding:0.25rem;
+    cursor:pointer;
+}
+
+.left {
+    position:fixed;
+    top:30%;
+    left:20%;
+}
+
+.right {
+    position:fixed;
+    top:30%;
+    right:20%;
+}
+
+.activeSlide {
+    opacity:1;
+}
+
+.nextSlide {
+    opacity:0;
+    transform:translate(50%, -50%);
+}
+
+.prevSlide {
+    opacity:0;
+    transform:translate(-150%, -50%);
+}
+
+.sliderButtons {
+    margin: 0 auto;
+    text-align: center;
+    width:10rem;
+    height:2rem;
+    border-radius:0.5rem;
+    padding:0.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.sliderButtons button {
+    width:1rem;
+    height: 1rem;
+    border-radius:50%;
+    border:2px solid orange;
+    background-color:transparent;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    margin: 0 0.5rem;
+    cursor:pointer;
+}
+

@@ -1,0 +1,130 @@
+.section {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.75);
+  width:80%;
+  margin:1rem auto;
+  border-radius: 2rem;
+  padding:1rem;
+}
+
+.header {
+  text-align: center;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.card {
+  width: 30vw;
+  height: auto;
+  margin: 3rem auto 0;
+  text-align: center;
+  padding: 1rem;
+}
+
+.imageContainer {
+  width: 10rem;
+  height: 10rem;
+  position: relative;
+  margin: auto;
+}
+
+.image {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.imageContainer::after {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  background-color: orange;
+  position: absolute;
+  z-index: -1;
+  top: -0.2rem;
+  right: 0.5rem;
+}
+
+.badge {
+  color: orange;
+  font-weight: bold;
+  position: absolute;
+  top: 0.5rem;
+  left: 1rem;
+  font-size: 1.5rem;
+}
+
+.card h3 {
+  color: orange;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-bottom: 0;
+}
+
+.card h4 {
+  color: rgb(161, 159, 159);
+  text-transform: capitalize;
+  margin-top: 0.5rem;
+}
+
+.left {
+  position: absolute;
+  top: 45%;
+  left: 15%;
+}
+.right {
+  position: absolute;
+  top: 45%;
+  right: 15%;
+}
+
+.left,
+.right {
+  color: grey;
+  background-color: rgb(233, 232, 232);
+  border-radius: 0.5rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.surpriseActions {
+  text-align: center;
+}
+.surpriseBtn {
+  font: inherit;
+  color: orange;
+  border: 1px solid orange;
+  padding: 0.5rem 1rem;
+  width: 8rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  background-color: transparent;
+  cursor: pointer;
+  /* position:absolute;
+    top:52%;
+    left:50%;
+    transform: translate(-50%,50%);*/
+}
+
+.carouselActions {
+  text-align: center;
+}
+
+.carouselActions button {
+  margin: 1rem 0.5rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: transparent;
+  border: transparent;
+  outline: 2px solid orange;
+  outline-offset: 2px;
+  cursor:pointer;
+}
